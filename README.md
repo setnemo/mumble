@@ -1,5 +1,11 @@
 # Mumble server in docker
 
+Create volume:
+
+```bash
+docker volume create --name=mumble-data
+```
+
 Run command:
 
 ```bash
