@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mumble:
+    image: phlak/mumble
+    container_name: mumble-server-docker
+    environment:
+      - TZ=Europe/Kiev
+    volumes:
+      - mumble-data:/etc/mumble
+    restart: always
+    ports:
+      - "64738:64738"
+      - "64738:64738/udp"
+
+volumes:
+  mumble-data:
+    external: true
